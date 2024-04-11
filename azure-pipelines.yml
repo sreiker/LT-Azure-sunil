@@ -1,0 +1,28 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- stage: BuildAndTest
+  jobs:
+  - job: BuildAndTestJob
+    steps:
+      - task: configuration@1
+        inputs:
+            connection: ritam_test
+            isTunnelActivate: false
+      
+      - script: |
+          mvn clean install -DskipTests
+      - script: "mvn test -D suite=single.xml"
+        displayName: "Command Line Script"
+      - task: LambdatestResults@1
+        
+- stage: LambdatestResults
+  jobs:
+  - job: LambdatestResultsJob
+    steps:
+      - script: |
+          echo "Hello"
