@@ -22,9 +22,9 @@ stages:
         displayName: "Command Line Script"
       - task: LambdatestResults@1
         
-- stage: LambdatestResults
-  jobs:
-  - job: LambdatestResultsJob
-    steps:
-      - script: |
-          echo "Hello"
+# - stage: LambdatestResults
+#   jobs:
+#   - job: LambdatestResultsJob
+#     steps:
+#       - script: |
+#           echo "Hello"
