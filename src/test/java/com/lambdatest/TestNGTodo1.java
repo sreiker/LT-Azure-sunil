@@ -32,6 +32,7 @@ public class TestNGTodo1 {
         caps.setCapability("build_name",file);
         caps.setCapability("build",file);
         caps.setCapability("plugin", "git-testng");
+        caps.setCapability("tunnel",true);
 
         String[] Tags = new String[] { "Feature", "Falcon", "Severe" };
         caps.setCapability("tags", Tags);
@@ -46,7 +47,9 @@ public class TestNGTodo1 {
         String spanText;
         System.out.println("Loading Url");
 
-        driver.get("https://lambdatest.github.io/sample-todo-app/");
+        //driver.get("https://lambdatest.github.io/sample-todo-app/");
+        driver.get("http://localhost:8080/");
+
 
         System.out.println("Checking Box");
         driver.findElement(By.name("li1")).click();
@@ -103,7 +106,7 @@ public class TestNGTodo1 {
 
     @AfterMethod
     public void tearDown() {
-        driver.executeScript("lambda-status=" + "failed");
+        driver.executeScript("lambda-status=" + Status);
         driver.quit();
     }
 
