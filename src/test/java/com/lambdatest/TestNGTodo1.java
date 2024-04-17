@@ -47,8 +47,9 @@ public class TestNGTodo1 {
         String spanText;
         System.out.println("Loading Url");
 
-        //driver.get("https://lambdatest.github.io/sample-todo-app/");
-        driver.get("http://localhost:8080/");
+        
+        driver.get("https://lambdatest.github.io/sample-todo-app/");
+        //driver.get("http://localhost:8080/");
 
 
         System.out.println("Checking Box");
