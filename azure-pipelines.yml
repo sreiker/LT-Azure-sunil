@@ -16,8 +16,6 @@ stages:
             connection: sunil-test
             isTunnelActivate: true
             tunnelOptions: '{tunnelName: "ABC"}'
-
-      
       - script: |
           mvn clean install -DskipTests
       - script: "mvn test -D suite=single.xml"
