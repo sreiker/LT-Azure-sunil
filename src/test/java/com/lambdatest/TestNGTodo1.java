@@ -33,6 +33,7 @@ public class TestNGTodo1 {
         caps.setCapability("build",file);
         caps.setCapability("plugin", "git-testng");
         caps.setCapability("tunnel",true);
+        caps.setCapability("tunnelName","ABC");
 
         String[] Tags = new String[] { "Feature", "Falcon", "Severe" };
         caps.setCapability("tags", Tags);
