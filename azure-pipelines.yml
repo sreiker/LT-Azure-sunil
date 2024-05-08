@@ -15,7 +15,8 @@ stages:
         inputs:
             connection: sunil-test
             isTunnelActivate: true
-            tunnelOptions: name:ABC
+            tunnelOptions: '{tunnelName: "ABC"}'
+
       
       - script: |
           mvn clean install -DskipTests
