@@ -15,12 +15,13 @@ stages:
         inputs:
             connection: sunil-test
             isTunnelActivate: true
+            tunnelOptions: name:ABC
       
       - script: |
           mvn clean install -DskipTests
       - script: "mvn test -D suite=single.xml"
         displayName: "Command Line Script"
-      - task: LambdatestResults@1
+# - task: LambdatestResults@1
         
 # - stage: LambdatestResults
 #   jobs:
