@@ -50,7 +50,7 @@ public class TestNGTodo2 {
         String[] Tags = new String[] { "Feature", "Magicleap", "Severe" };
         caps.setCapability("tags", Tags);
 
-        driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
+        driver = new RemoteWebDriver(new URL("http://" + username + ":" + authkey + hub), caps);
     }
 
     @Test
