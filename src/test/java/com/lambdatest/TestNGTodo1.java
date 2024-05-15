@@ -39,7 +39,7 @@ public class TestNGTodo1 {
         caps.setCapability("tags", Tags);
         System.out.println(file);
 
-        driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
+        driver = new RemoteWebDriver(new URL("http://" + username + ":" + authkey + hub), caps);
 
     }
 
