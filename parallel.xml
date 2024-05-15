@@ -6,15 +6,20 @@
       <class name="com.lambdatest.TestNGTodo1"/>
       <class name="com.lambdatest.TestNGTodo2"/>
       <class name="com.lambdatest.TestNGTodo3"/>
-      <class name="com.lambdatest.TestNGTodo1"/>
-      <class name="com.lambdatest.TestNGTodo2"/>
-      <class name="com.lambdatest.TestNGTodo3"/>
-      <class name="com.lambdatest.TestNGTodo1"/>
-      <class name="com.lambdatest.TestNGTodo2"/>
-      <class name="com.lambdatest.TestNGTodo3"/>
+    </classes>
+  </test> 
+    <test thread-count="20" parallel="classes" name="Test1">
+    <classes>
       <class name="com.lambdatest.TestNGTodo1"/>
       <class name="com.lambdatest.TestNGTodo2"/>
       <class name="com.lambdatest.TestNGTodo3"/>
     </classes>
-  </test> <!-- Test -->
+  </test>
+    <test thread-count="20" parallel="classes" name="Test2">
+    <classes>
+      <class name="com.lambdatest.TestNGTodo1"/>
+      <class name="com.lambdatest.TestNGTodo2"/>
+      <class name="com.lambdatest.TestNGTodo3"/>
+    </classes>
+  </test><!-- Test -->
 </suite> <!-- Suite -->
