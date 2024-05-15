@@ -20,8 +20,8 @@ public class TestNGTodo3 {
 
     @BeforeMethod
     public void setup(Method m, ITestContext ctx) throws MalformedURLException {
-        String username ="ritamg";
-        String authkey ="TK7DCf2rFcBJzT3IHz4kD47lThhsHckrlGtiGkYyetAcixtrj5";
+        String username ="sunilr";
+        String authkey ="LtQPqIWXiN4kHjRSQ9juzDmQZV7tpbssbvyEJ13JPS4QfhGduU";
         ;
         String hub = "@hub.lambdatest.com/wd/hub";
 
@@ -100,7 +100,7 @@ public class TestNGTodo3 {
 
     @AfterMethod
     public void tearDown() {
-        driver.executeScript("lambda-status=" + "error");
+        driver.executeScript("lambda-status=" + Status);
         driver.quit();
     }
 
